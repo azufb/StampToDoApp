@@ -11,7 +11,7 @@ export default new Vuex.Store({
         title: 'PHP'
       }
     ],
-    dones: [
+    dones: [ 'Python'
     ]
   },
   getters: {
@@ -32,8 +32,9 @@ export default new Vuex.Store({
     },
     doneTodo(state, d) {
       let index = state.todos.findIndex(todo => todo.d === d);
-      let doneItem = state.todos.splice(index, 1);
+      let doneItem = state.todos[index]['title'];
       state.dones.push(doneItem);
+      state.todos.splice(index, 1);
     }
   },
   actions: {

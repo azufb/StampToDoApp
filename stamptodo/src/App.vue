@@ -13,10 +13,12 @@
         <input type='button' value='DONE' v-on:click='doneTodo(todo.d)' />
         <input type='button' value='DELETE' v-on:click='deleteTodo(todo.d)' />
     </ul>
-    <ul v-for='(done, index) of dones' :key='index'>
+    <h2>DONE AREA</h2>
+    <ul v-for='(done, id) of dones' :key='id'>
       <li>
         {{ done }}
       </li>
+      <input type='button' value='DELETE' v-on:click='deleteTodo(todo.d)' />
     </ul>
   </div>
 </template>
