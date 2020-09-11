@@ -5,6 +5,9 @@
       <input type='text' id='title' v-model='title' required />
       <input type='submit' value='ADD' />
     </form>
+    <div class='todos'>
+      <div>
+        <h2>IN PROGRESS AREA</h2>
     <ul v-for='( todo, index ) in todos' :key='index'>
       <li>
         {{ todo.d }}
@@ -13,6 +16,8 @@
         <input type='button' value='DONE' v-on:click='doneTodo(todo.d)' />
         <input type='button' value='DELETE' v-on:click='deleteTodo(todo.d)' />
     </ul>
+    </div>
+    <div>
     <h2>DONE AREA</h2>
     <ul v-for='(done, id) of dones' :key='id'>
       <li>
@@ -20,6 +25,8 @@
       </li>
       <input type='button' value='DELETE' v-on:click='deleteTodo(todo.d)' />
     </ul>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -73,5 +80,9 @@ export default {
 
 ul li {
   list-style: none;
+}
+
+.todos {
+  display: flex;
 }
 </style>
