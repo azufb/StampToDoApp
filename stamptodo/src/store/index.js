@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VCalendar from 'v-calendar'
 import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex)
+Vue.use(VCalendar, {
+  componentPrefix: 'vc',
+});
 
 export default new Vuex.Store({
   state: {
