@@ -12,8 +12,7 @@ export default new Vuex.Store({
         title: 'PHP'
       }
     ],
-    dones: [ 'Python'
-    ]
+    dones: ['Python']
   },
   getters: {
     todos(state) {
@@ -38,7 +37,7 @@ export default new Vuex.Store({
       state.todos.splice(index, 1);
     },
     allDone(state) {
-      state.dones = '';
+      state.dones.splice(0, state.dones.length);
     }
   },
   plugins: [createPersistedState()],
