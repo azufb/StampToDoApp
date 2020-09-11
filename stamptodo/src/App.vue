@@ -25,7 +25,7 @@
         </ul>
         <input type='button' value='ALL DONE!' v-on:click='allDone()' />
       </div>
-      <vc-calendar :attributes='attrs' />
+
     </div>
   </div>
 </template>
@@ -40,9 +40,6 @@ export default {
     },
     dones() {
       return this.$store.getters.dones;
-    },
-    attrs() {
-      return this.$store.getters.attrs;
     }
   },
   data() {
