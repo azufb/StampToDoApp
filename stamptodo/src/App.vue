@@ -23,8 +23,8 @@
       <li>
         {{ done }}
       </li>
-      <input type='button' value='DELETE' v-on:click='deleteTodo(todo.d)' />
     </ul>
+    <input type='button' value='ALL DONE!' v-on:click='allDone()' />
     </div>
     </div>
   </div>
@@ -63,6 +63,9 @@ export default {
     },
     doneTodo(d) {
       this.$store.commit('doneTodo', d);
+    },
+    allDone() {
+      this.$store.commit('allDone');
     }
   }
 }

@@ -36,6 +36,9 @@ export default new Vuex.Store({
       let doneItem = state.todos[index]['title'];
       state.dones.push(doneItem);
       state.todos.splice(index, 1);
+    },
+    allDone(state) {
+      state.dones = '';
     }
   },
   plugins: [createPersistedState()],
