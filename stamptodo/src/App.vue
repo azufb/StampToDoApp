@@ -8,23 +8,24 @@
     <div class='todos'>
       <div>
         <h2>IN PROGRESS AREA</h2>
-    <ul v-for='( todo, index ) in todos' :key='index'>
-      <li>
-        {{ todo.title }}
-      </li>
-        <input type='button' value='DONE' v-on:click='doneTodo(todo.d)' />
-        <input type='button' value='DELETE' v-on:click='deleteTodo(todo.d)' />
-    </ul>
-    </div>
-    <div>
-    <h2>DONE AREA</h2>
-    <ul v-for='(done, id) of dones' :key='id'>
-      <li>
-        {{ done }}
-      </li>
-    </ul>
-    <input type='button' value='ALL DONE!' v-on:click='allDone()' />
-    </div>
+        <ul v-for='( todo, index ) in todos' :key='index'>
+          <li>
+            {{ todo.title }}
+          </li>
+          <input type='button' value='DONE' v-on:click='doneTodo(todo.d)' />
+          <input type='button' value='DELETE' v-on:click='deleteTodo(todo.d)' />
+        </ul>
+      </div>
+      <div>
+        <h2>DONE AREA</h2>
+        <ul v-for='(done, id) of dones' :key='id'>
+          <li>
+            {{ done }}
+          </li>
+        </ul>
+        <input type='button' value='ALL DONE!' v-on:click='allDone()' />
+      </div>
+      <vc-calendar />
     </div>
   </div>
 </template>
