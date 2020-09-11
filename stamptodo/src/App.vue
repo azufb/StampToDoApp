@@ -10,7 +10,6 @@
         <h2>IN PROGRESS AREA</h2>
     <ul v-for='( todo, index ) in todos' :key='index'>
       <li>
-        {{ todo.d }}
         {{ todo.title }}
       </li>
         <input type='button' value='DONE' v-on:click='doneTodo(todo.d)' />
