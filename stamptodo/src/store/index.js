@@ -1,12 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import VCalendar from 'v-calendar'
 import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex)
-Vue.use(VCalendar, {
-  componentPrefix: 'vc',
-});
 
 export default new Vuex.Store({
   state: {
@@ -17,13 +13,6 @@ export default new Vuex.Store({
       }
     ],
     dones: ['Python'],
-    attrs: [
-      {
-        key: 'today',
-        dot: true,
-        dates: new Date()
-      }
-    ]
   },
   getters: {
     todos(state) {
@@ -31,9 +20,6 @@ export default new Vuex.Store({
     },
     dones(state) {
       return state.dones;
-    },
-    attrs(state) {
-      return state.attrs;
     }
   },
   mutations: {
