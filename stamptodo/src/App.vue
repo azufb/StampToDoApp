@@ -1,6 +1,16 @@
 <template>
-  <div id="app">
-
+  <div id='app'>
+    <h1>タスクスタンプラリー</h1>
+    <form>
+      <input type='text' />
+      <input type='submit' value='ADD' />
+    </form>
+    <ul>
+      <li>
+        <input type='button' value='DONE' />
+        <input type='button' value='DELETE' />
+      </li>
+    </ul>
   </div>
 </template>
 
