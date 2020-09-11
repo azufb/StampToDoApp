@@ -16,7 +16,14 @@ export default new Vuex.Store({
         title: 'PHP'
       }
     ],
-    dones: ['Python']
+    dones: ['Python'],
+    attrs: [
+      {
+        key: 'today',
+        dot: true,
+        dates: new Date()
+      }
+    ]
   },
   getters: {
     todos(state) {
@@ -24,6 +31,9 @@ export default new Vuex.Store({
     },
     dones(state) {
       return state.dones;
+    },
+    attrs(state) {
+      return state.attrs;
     }
   },
   mutations: {
