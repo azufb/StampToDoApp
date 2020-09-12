@@ -33,7 +33,7 @@ export default new Vuex.Store({
     },
     allDone(state) {
       state.dones.splice(0, state.dones.length);
-      window.alert('Good Job🎉\nよく頑張りました⭐️\nえらい！！');
+      window.alert('Good Job🎉\n今日もよく頑張りました⭐️\n毎日えらい！！さすがだね✨');
     }
   },
   plugins: [createPersistedState()],
