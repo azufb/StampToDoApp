@@ -130,6 +130,7 @@ ul li {
   list-style: none;
   font-size: 25px;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .progress {
@@ -182,12 +183,12 @@ footer {
   }
 
   ul li {
-    list-style: none;
     font-size: 15px;
+    margin-left: 0px;
   }
 
   .dBtn {
-  margin-left: 0px;
+    margin-left: 0px;
   }
 
   .done {
