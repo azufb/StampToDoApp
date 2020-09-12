@@ -6,13 +6,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    todos: [
-      {
-        d: new Date(),
-        title: 'PHP'
-      }
-    ],
-    dones: ['Python'],
+    todos: [],
+    dones: [],
   },
   getters: {
     todos(state) {
@@ -38,6 +33,7 @@ export default new Vuex.Store({
     },
     allDone(state) {
       state.dones.splice(0, state.dones.length);
+      window.alert('Good Job🎉\nよく頑張りました⭐️\nえらい！！');
     }
   },
   plugins: [createPersistedState()],
